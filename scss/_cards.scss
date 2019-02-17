@@ -21,6 +21,11 @@
         color: $primary-color;
         border: none;
         box-shadow: 0px 2px 9px #a2a2a2;
+        transition: margin 300ms ease-in-out;
+
+        &:hover {
+            margin: 4.8rem 0 0 0;
+        }
     }
 
     a {

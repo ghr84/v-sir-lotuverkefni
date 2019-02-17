@@ -15,6 +15,11 @@
 
             .modal-btn {
                 margin: 7rem 0 0 0;
+                transition: margin 300ms ease-in-out;
+
+                &:hover {
+                    margin: 6.8rem 0 0 0;
+                }
             }
         }   
     }
