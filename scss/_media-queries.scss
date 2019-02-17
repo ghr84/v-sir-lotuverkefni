@@ -1,0 +1,117 @@
+//// @Media-Queries 
+
+
+// Cards
+
+@media all and (min-width: $tablet) {
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 775px;
+        margin: 0 auto;
+
+        .card {
+            @include width-height(null, 25.45em);
+
+            .modal-btn {
+                margin: 7rem 0 0 0;
+            }
+        }   
+    }
+}
+
+// Index -- Search Button
+
+
+@media all and (min-width: $tablet) {
+    .wrapper .button {
+        @include width-height(25.94em, 4em);
+    }   
+}
+
+// Footer 
+
+@media all and (max-width: 635px) {
+    footer {
+    
+        .footer-wrapper {
+            padding: 1rem 0.5rem;
+    
+            .social-logos {
+                justify-content: flex-end;
+
+                .insta {
+                    @include width-height(30px, 30px);
+                }
+        
+                .face {
+                    @include width-height(30px, 30px);
+                }
+        
+                .twitter {
+                    @include width-height(38px, 30.13px);
+                }
+            }
+    
+            .info {
+    
+                h3 {
+                    font-size: 1.8rem;
+                }
+        
+                span {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+//Typeography
+
+
+@media all and (min-width: $tablet) {
+    body {
+
+        .wrapper {
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    
+        h3 {
+            font-size: $h3;
+        
+        }
+    
+        span {
+            font-size: $alt;
+    
+        }
+    
+        li {
+            font-size: $h2;
+            @include width-height(null, 3rem);
+        
+        }
+    
+        .checkbox-container {
+            font-size: $h3;
+        }
+            
+        .btn-text {
+            font-size: $h2;   
+        }   
+
+        .card .free-logo {
+            margin: 0.5rem 0 0 0;
+        } 
+    }   
+}
+
+
+

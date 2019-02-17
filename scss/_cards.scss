@@ -1,0 +1,214 @@
+
+
+////// Cards.html //////
+
+
+.card {
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, .25);
+    @include width-height(21em, 23.45em);
+    margin: 3.25em auto;
+
+    .modal-btn {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        @include width-height(3rem, 3rem);
+        margin: 5rem 0 0 0;
+        padding: 0 0 3rem 0;
+        font-size: 2rem;
+        border-radius: 50%;
+        background-color: #fff;
+        color: $primary-color;
+        border: none;
+        box-shadow: 0px 2px 9px #a2a2a2;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .card-content {
+        @extend %flex-space-btwn-col;
+        @include width-height( null, 9.31em);
+        padding: 1.375rem 1rem;
+        box-sizing: border-box;
+    }
+
+    span {
+        margin: 0 0 0.1em 0;
+        display: block;
+    }
+
+    .flex-row {
+        margin: 0.8rem 0 0 0;
+        @extend %flex-space-btwn-row;
+    }
+
+    .free-logo {
+        @include width-height( 5.125rem, 1.5rem);
+        border: 2px solid $freenow-logo;
+        text-align: center;
+        padding: 2px 0 0 0;
+    }
+
+    .flex-heart {
+        @include flex-end(flex-end, null);
+        
+        .heart {
+            background-image: url(../img/heart-card.svg);
+            background-repeat: no-repeat;
+            @include width-height( 1.5em, 1.09em);
+            position: absolute;
+            margin: 0.5em -0.5em;
+            z-index: 1;
+        }   
+    }
+
+    .carousel {
+        @include width-height( 20.94em, 13.94em);
+        box-sizing: border-box;
+
+        .slick-prev {
+            left: 5px;
+            z-index: 1;    
+        }
+
+        .slick-next {
+            right: 5px;
+        }
+
+        .img-1 {
+            background-image: url('../img/ibud.svg');
+            @extend %img-stngs-carousel;
+        }
+
+        .img-2 {
+            @extend %img-stngs-carousel;
+            background-image: url('../img/img-1.svg');
+        }
+
+        .img-3 {
+            background-image: url('../img/img-3.svg');
+            @extend %img-stngs-carousel;
+        }
+    }
+}
+
+// Card-selected - Modal window 
+
+
+.cards-container {
+
+    .modal-wndw .show {
+        padding-right: 0;
+    }
+
+    .modal-dialog {
+        position: relative;
+        width: auto;
+        margin: 0 auto;
+        pointer-events: none;
+
+        .modal-alt {
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            width: 24.7em;
+            margin: 2rem auto;
+            pointer-events: auto;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: .3rem;
+            outline: 0;
+        }
+    }
+
+    .card-selected {
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, .25);
+        width: 24.56em;
+    
+        .carousel-selected {
+            @include width-height( 24.56em, 14.94em);
+    
+            .slick-prev {
+                left: 5px;
+                z-index: 1;    
+            }
+    
+            .slick-next {
+                right: 5px;
+            }
+    
+            .img-1-xl {
+                background-image: url('../img/img-1-xl.svg');
+                @extend %img-large-carousel;
+            }
+    
+            .img-2-xl {
+                background-image: url('../img/img-2-xl.svg');
+                @extend %img-large-carousel;
+            }
+    
+            .img-3-xl {
+                background-image: url('../img/img-3-xl.svg');
+                @extend %img-large-carousel;
+            }
+        }
+    
+        .card-selected-header {
+            @extend %flex-space-btwn-row;
+            @include width-height( null, 7.5em);    
+            padding: 1.5em 1em;
+    
+            div:nth-child(1) {
+               @extend %flex-space-btwn-col;
+    
+                span {
+                    display: block;
+                }
+            }
+    
+            .flex-col {
+                @extend %flex-space-btwn-col;
+                align-items: flex-end;   
+
+                .free-logo {
+                    @include width-height( 5.125rem, 1.5rem);    
+                    color: $freenow-logo;
+                    border: 2px solid $freenow-logo;
+                    text-align: center;
+                    padding: 2px 0 0 0;
+                }
+            }
+        }
+    
+        .card-selected-content {
+            padding: 0 1em 1em 1em;
+            margin: 2.5rem 0 0 0;
+            line-height: 1.5em;
+    
+            div {
+                display: flex;
+                align-items: center;
+                color: $primary-color;
+                margin: 2.3em 0 0 0;
+           
+            }
+             
+            a {
+                text-decoration: none;
+            }
+    
+            .message {
+                background-image: url('../img/mail.svg');
+                background-repeat: no-repeat;
+                @include width-height( 1.5em, 1em);    
+                margin: 0 0.5em 0 0;
+            }
+        }
+    }   
+}
+

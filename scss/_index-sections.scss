@@ -1,0 +1,306 @@
+//////////// Sections index.html /////////////
+
+
+// Header nav
+
+
+header {
+    height: 4em;
+    @extend %flex-space-btwn-row;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 0 5%;
+
+    .hamburger-menu {
+        background-image: url('../img/burger.svg');
+        @include logos-header (no-repeat, 1.21em, 1.875em);
+    }
+
+    .logo {
+        background-image: url('../img/logo.svg');
+        @include logos-header (no-repeat, 2.4375em, 4.9375em); 
+        margin: 0 0 0.8em 0;
+    }    
+
+    .basket {
+        background-image: url('../img/heart.svg');
+        @include logos-header (no-repeat, 1.08625em, 1.5em); 
+    }
+}
+
+
+// Property type section
+
+
+.rent-type {
+   @extend %flex-wrap;
+    margin: 2.5em auto 0;
+
+    .type {
+            @extend %img-stngs;
+
+        &:hover {
+            @extend %hover;
+        }
+
+        &.type-1-alt {
+            background-color: $primary-color;
+            box-shadow: -3px 2px 5px 0px rgba(0, 0, 0, .25);    
+
+            .img path {
+                fill: $light-color;    
+            }  
+        }
+    }
+}
+
+
+// Where/Hvar section
+
+.wrapper {
+    max-width: 680px;
+    width: 90%;
+    margin: 0 auto;
+
+    li {
+        display: flex;
+    }
+}
+
+.places-list {
+    max-width: 680px;
+    border: solid 2px $secondary-color;
+    padding: 1em 1em 0 1em;
+    color: $primary-color;
+    cursor: pointer;
+
+    .zone {
+        .plus  {
+            background-image: url('../img/+.svg');
+            background-repeat: no-repeat;
+            @include width-height(2em,2em);
+        }  
+    } 
+
+    ul {
+      display: none;
+      
+      &.active {  
+
+        >li {
+            display: none;
+  
+          &.active {
+            display: block;
+            
+            >ul {
+              display: block;
+            }
+          }
+        }
+      } 
+    }
+    
+    >ul {
+      display: block;
+    }
+}
+
+
+// Price/Verð section
+
+
+.price, 
+.size {
+    color: $primary-color;
+
+    // Price/Verð -- Size/Stærð -- Sliders 
+
+    .rangeValues {
+        height: 40px;
+        width: 266px;
+    }
+
+    .range-slider {
+        position: relative;
+        @include width-height(100%, 100px);
+        font-size: 16px;
+        font-family: TT Norms;
+        font-variant-ligatures: no-common-ligatures;
+
+        span {
+            display: inline;
+        }
+
+        input {
+                pointer-events: none;
+                position: absolute;
+                left: 0;
+                top: 3rem;
+                width: 266px;
+                outline: none;
+                margin: 0;
+                padding: 0;
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                @include width-height(32px, 32px);
+                border-radius: 50%;
+                background: $primary-color;
+                opacity: 0.7;
+                cursor: pointer;
+            }
+
+            &::-moz-range-thumb {
+                @include width-height(32px, 32px);
+                border-radius: 50%;
+                background: $primary-color;
+                cursor: pointer;
+            }
+
+        }
+        .doubleslider {
+            -webkit-appearance: none;
+            @include width-height(100%, 8px);
+            border-radius: 5px;
+            background: $secondary-color;
+            outline: none;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        
+            &:last-child {
+                background-color: transparent;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+        .range-slider input {
+
+        &::-webkit-slider-thumb {
+            pointer-events: all;
+            position: relative;
+            z-index: 1;
+            outline: 0;
+        }
+
+        &::-moz-range-thumb {
+            pointer-events: all;
+            position: relative;
+            z-index: 10;
+            -moz-appearance: none;
+        }
+
+        &::-moz-range-track {
+            position: relative;
+            z-index: -1;
+            background-color: rgba(0, 0, 0, 1);
+            border: 0;
+        }
+        &:last-of-type::-moz-range-track {
+            -moz-appearance: none;
+            background: none transparent;
+            border: 0;
+            color: coral;
+        
+        }
+        &[type=range]::-moz-focus-outer {
+            border: 0;
+        }
+    }
+
+    div {
+        color: $primary-color;
+    }
+}
+
+
+// Rooms/herbergi section
+
+.rooms {
+    margin: 3em 0;
+
+    div {
+        @extend %flex-wrap;
+    }
+
+    .room {
+        border-radius: 2px;
+        color: $primary-color;
+        @extend %img-stngs;
+
+        &:hover {
+            @extend %hover;
+        }
+    }
+
+    .room-clicked {
+        @extend %flex-center;
+        background-color: $primary-color;
+        color: $light-color;
+        box-shadow: -3px 2px 5px 0px rgba(0, 0, 0, .25); 
+        @extend %img-stngs;
+    }
+}
+
+
+// Other/Annað section
+
+.other {
+    margin: 0 0 2.5em 0;
+
+    h3:nth-child(3) {
+        margin: 0;
+      }
+    
+    .other-wrapper {
+        @include width-height( 90%, null);
+        margin: 0 auto;
+        padding: 0 0 5em 0;
+        color: $primary-color;
+        
+        .checkbox-container {
+            @extend %flex-space-btwn-row;
+            text-align: center;
+            @include width-height( 6.5em, null);
+            margin: 2.625em 0;
+        }
+    }
+}
+
+
+// Footer
+
+footer {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+    .footer-wrapper {
+        @include width-height( 90%, null);
+        @extend %flex-space-btwn-row;
+        margin: 0 auto;
+        padding: 1rem;
+
+        .social-logos {
+            @include flex-end(null, flex-end);
+            width: 9rem;
+    
+            .insta {
+                @include width-height( 36px, 36px);
+                margin-right: 0.5rem;
+            }
+    
+            .face {
+                @include width-height( 36px, 36px);
+                margin-right: 0.5rem;
+            }
+    
+            .twitter {
+                @include width-height( 42px, 34.13px);
+            }
+        }
+    }
+}

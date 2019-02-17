@@ -1,0 +1,51 @@
+//////////// Forms /////////////
+
+
+//Checkboxes - Where Section
+
+
+// Checkboxes - Other Section
+
+
+input[type="radio"] {
+    position: relative;
+    display: inline-block;
+    @include width-height(2em, 2em);
+
+    &:checked {
+        &:after {
+        border: solid 0.25em $alt-color;
+        background-color: $secondary-color;
+        }
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        background-color: $primary-color;
+        border: solid 0.25em $alt-color;
+    }
+}
+
+
+
+// Search button
+
+
+.wrapper {
+    .button {
+        
+        @include width-height(20.94em, 3em);
+        border-radius: 2px;
+        background-color: $primary-color;
+        @extend %flex-center;
+        margin: 0 auto;
+
+        &:hover {
+            transition: 0.7s;
+            background-color: $alt-color;
+        }
+    }    
+}

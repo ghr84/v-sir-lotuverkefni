@@ -1,0 +1,108 @@
+
+
+//////////// Typography /////////////
+
+
+
+@font-face { 
+    font-family: BerlinskeSlabMd; src: url('../type/Berlingske\ Slab\ Md/BerlingskeSlab-Md_0.otf');
+}
+
+@font-face {
+    font-family: BerlinskeSlabDpRg; src: url('../type/Berlingske\ Slab\ Display\ Regular/BerlingskeSlabDisplay-Rg_0.otf');
+}
+
+@font-face {
+    font-family: BerlinskeSlabDpLt; src: url('../type/Berlingske\ Slab\ Display\ Lt/BerlingskeSlabDisplay-Lt_0.otf');
+}
+
+
+body {
+    font-family: BerlinskeSlabMd;
+
+    a {
+        text-decoration: none;    
+    }
+
+    h2 {
+        @include font-stngs($mobile-h2, null, $primary-color);
+        margin: 3rem 0;
+    }
+
+    h3 {
+        @include font-stngs($mobile-h3, null, $primary-color);
+        margin: 0 0 2rem 0;
+    }
+
+    span {
+        display: block;
+        @include font-stngs($mobile-h3, BerlinskeSlabDpLt, $secondary-color);
+    }
+
+    li {
+        @include font-stngs($mobile-h2, null, $primary-color);
+    }
+
+    .checkbox-container {
+        @include font-stngs($mobile-h3, null, $primary-color);
+    }
+
+    .btn-text {
+        @include font-stngs($mobile-h2, BerlinskeSlabMd, $light-color);
+    }
+    
+    .free-logo {
+        @include width-height(5.125rem, 1.1rem);
+        color: $freenow-logo;
+        border: 2px solid $freenow-logo;
+        text-align: center;
+        padding: 2px 0 0 0;
+    }
+
+    .card-content {
+
+        h2 {
+           margin: 0 0 0.513rem 0;
+        }
+    }
+
+    .card-selected {
+
+        h2 {
+            margin: 0;
+        }
+
+        span {
+            @include font-stngs($mobile-h3, BerlinskeSlabMd, $secondary-color);
+        }
+
+        p {
+            @include font-stngs($mobile-h3, BerlinskeSlabDpRg, $primary-color);
+            margin: 0 0 2rem 0;
+        }
+
+        .card-selected-content span {
+            @include font-stngs(null, BerlinskeSlabDpRg, $primary-color);
+        }
+    }
+}
+
+
+/// Footer ///                                                                          
+
+footer {
+
+    .footer-wrapper {
+
+        .info {
+
+            h3 {
+                @include font-stngs($h2, BerlinskeSlabDpRg, null);
+            }
+    
+            span {
+                @include font-stngs($alt, BerlinskeSlabDpLt, $primary-color);
+            }
+        }
+    }
+}

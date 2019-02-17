@@ -1,0 +1,67 @@
+
+
+//////////// Placeholder Selectors /////////////
+
+
+
+%img-stngs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    @include width-height(5em, 5em);
+    border: 1px solid $primary-color;
+    margin: 0.5em;
+    box-shadow: -5px 4px 10px 0px rgba(0, 0, 0, .25);
+    transition: box-shadow 400ms ease-in-out;
+}
+
+%img-stngs-carousel {
+    display: flex;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include width-height( 20.94em, 13.94em);    
+}
+
+%img-large-carousel {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 14.94em;
+    width: 24.56em;    
+}
+
+%hover {
+    box-shadow: -3px 2px 5px 0px rgba(0, 0, 0, .25);    
+}
+
+
+
+////////////// Flex ////////////////
+
+
+
+%flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%flex-space-btwn-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+}
+
+%flex-space-btwn-row {
+    display: flex;
+    justify-content: space-between;   
+}
+
+
